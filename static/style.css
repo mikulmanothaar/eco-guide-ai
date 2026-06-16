@@ -1,40 +1,106 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f7f5;
+    background: #f4f7fb;
     margin: 0;
-    padding: 40px;
+    padding: 0;
 }
 
 .container {
-    max-width: 700px;
-    margin: auto;
+    max-width: 900px;
+    margin: 40px auto;
     background: white;
-    padding: 25px;
-    border-radius: 12px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
 }
 
-h1, h2 {
+h1 {
     text-align: center;
+    color: #1b4332;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
 }
 
 label {
+    font-weight: bold;
     display: block;
     margin-top: 15px;
-    margin-bottom: 5px;
 }
 
 input,
-select,
-button {
+select {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
 button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background: #2d6a4f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.results {
-    margin-top: 25px;
+button:hover {
+    background: #1b4332;
+}
+
+.result-card {
+    margin-top: 30px;
+    text-align: center;
+    background: #edf7ed;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.result-value {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1b4332;
+}
+
+.grade {
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.section {
+    margin-top: 35px;
+}
+
+.section h2 {
+    color: #2d6a4f;
+}
+
+.chart {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.chart img {
+    max-width: 500px;
+    width: 100%;
+}
+
+ul {
+    line-height: 1.8;
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+    margin-top: 30px;
 }

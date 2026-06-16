@@ -34,3 +34,31 @@ def total_footprint(data):
         + flight_emission(data["flights"])
         + diet_emission(data["diet"])
     )
+def emission_breakdown(data):
+    return {
+        "transport": round(
+            transport_emission(
+                data["distance"],
+                data["vehicle"]
+            ),
+            2
+        ),
+        "electricity": round(
+            electricity_emission(
+                data["electricity"]
+            ),
+            2
+        ),
+        "flights": round(
+            flight_emission(
+                data["flights"]
+            ),
+            2
+        ),
+        "diet": round(
+            diet_emission(
+                data["diet"]
+            ),
+            2
+        ),
+    }

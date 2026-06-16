@@ -1,6 +1,14 @@
 from flask import Flask, render_template, request
 
-from carbon.calculator import total_footprint
+import matplotlib
+matplotlib.use("Agg")
+
+import matplotlib.pyplot as plt
+from carbon.calculator import (
+    total_footprint,
+    emission_breakdown
+)
+
 from carbon.recommendations import get_recommendations
 
 app = Flask(__name__)
@@ -11,6 +19,7 @@ def home():
     result = None
     grade = None
     recommendations = []
+    breakdown = {}
 
     if request.method == "POST":
         data = {
@@ -36,6 +45,21 @@ def home():
         elif result > 2:
             grade = "B"
 
+        breakdown = emission_breakdown(data)
+
+        labels = list(breakdown.keys())
+        sizes = list(breakdown.values())
+
+        plt.figure(figsize=(5, 5))
+        plt.pie(
+            sizes,
+            labels=labels,
+            autopct="%1.1f%%"
+        )
+        plt.title("Carbon Emission Sources")
+        plt.savefig("static/charts/emissions.png")
+        plt.close()
+
         recommendations = get_recommendations(data)
 
     return render_template(
@@ -43,6 +67,7 @@ def home():
         result=result,
         grade=grade,
         recommendations=recommendations,
+        breakdown=breakdown,
     )
 
 
