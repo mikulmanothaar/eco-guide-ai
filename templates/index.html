@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoGuide AI</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
@@ -12,41 +16,60 @@
     <h1>🌍 EcoGuide AI</h1>
 
     <p class="subtitle">
-        <div class="info-box">
-    <h3>Why This Matters</h3>
-    <p>
-        Climate change is driven largely by greenhouse gas emissions.
-        EcoGuide AI helps users understand where their emissions come from
-        and provides actionable recommendations to reduce their carbon footprint.
-    </p>
-</div>
         Smart Carbon Footprint Awareness Platform
     </p>
 
+    <div class="info-box">
+        <h3>Why This Matters</h3>
+        <p>
+            Climate change is driven largely by greenhouse gas emissions.
+            EcoGuide AI helps users understand where their emissions come from
+            and provides actionable recommendations to reduce their carbon footprint.
+        </p>
+    </div>
+
     <form method="POST">
 
-        <label>Daily Commute Distance (km)</label>
-        <input type="number" step="0.1" name="distance" required>
+        <label for="distance">Daily Commute Distance (km)</label>
+        <input
+            type="number"
+            step="0.1"
+            name="distance"
+            id="distance"
+            required>
 
-        <label>Vehicle Type</label>
-        <select name="vehicle">
+        <label for="vehicle">Vehicle Type</label>
+        <select name="vehicle" id="vehicle">
+
             <option value="car">Car</option>
             <option value="bus">Bus</option>
             <option value="bike">Bike</option>
             <option value="walk">Walk</option>
+
         </select>
 
-        <label>Monthly Electricity Usage (kWh)</label>
-        <input type="number" step="0.1" name="electricity" required>
+        <label for="electricity">Monthly Electricity Usage (kWh)</label>
+        <input
+            type="number"
+            step="0.1"
+            name="electricity"
+            id="electricity"
+            required>
 
-        <label>Flights Per Year</label>
-        <input type="number" name="flights" required>
+        <label for="flights">Flights Per Year</label>
+        <input
+            type="number"
+            name="flights"
+            id="flights"
+            required>
 
-        <label>Diet Type</label>
-        <select name="diet">
+        <label for="diet">Diet Type</label>
+        <select name="diet" id="diet">
+
             <option value="vegan">Vegan</option>
             <option value="vegetarian">Vegetarian</option>
             <option value="nonveg">Non-Vegetarian</option>
+
         </select>
 
         <button type="submit">
@@ -76,10 +99,10 @@
         <h2>📊 Emission Breakdown</h2>
 
         <ul>
-            <li>Transportation: {{ breakdown.transport }} tCO₂</li>
-            <li>Electricity: {{ breakdown.electricity }} tCO₂</li>
-            <li>Flights: {{ breakdown.flights }} tCO₂</li>
-            <li>Diet: {{ breakdown.diet }} tCO₂</li>
+            <li><strong>Transportation:</strong> {{ breakdown.transport }} tCO₂</li>
+            <li><strong>Electricity:</strong> {{ breakdown.electricity }} tCO₂</li>
+            <li><strong>Flights:</strong> {{ breakdown.flights }} tCO₂</li>
+            <li><strong>Diet:</strong> {{ breakdown.diet }} tCO₂</li>
         </ul>
 
     </div>
@@ -88,7 +111,9 @@
 
         <h2>📈 Emission Distribution</h2>
 
-        <img src="{{ url_for('static', filename='charts/emissions.png') }}">
+        <img
+            src="{{ url_for('static', filename='charts/emissions.png') }}"
+            alt="Carbon emission distribution chart">
 
     </div>
 
@@ -98,7 +123,7 @@
 
         <ul>
             {% for item in recommendations %}
-            <li>{{ item }}</li>
+                <li>{{ item }}</li>
             {% endfor %}
         </ul>
 
@@ -107,7 +132,7 @@
     {% endif %}
 
     <div class="footer">
-        EcoGuide AI • Carbon Awareness Platform
+        EcoGuide AI © 2026 • Built for Carbon Footprint Awareness
     </div>
 
 </div>

@@ -1,54 +1,55 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #f4f7fb);
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 40px auto;
     background: white;
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 h1 {
     text-align: center;
     color: #1b4332;
+    font-size: 42px;
 }
 
 .subtitle {
     text-align: center;
-    color: #555;
+    color: #666;
     margin-bottom: 30px;
 }
 
-label {
-    font-weight: bold;
-    display: block;
-    margin-top: 15px;
+.info-box {
+    background: #edf7ed;
+    border-left: 5px solid #2d6a4f;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 10px;
 }
 
-input,
-select {
+input, select {
     width: 100%;
     padding: 12px;
     margin-top: 8px;
-    border: 1px solid #ccc;
+    margin-bottom: 15px;
     border-radius: 8px;
-    box-sizing: border-box;
+    border: 1px solid #ccc;
 }
 
 button {
     width: 100%;
-    margin-top: 25px;
     padding: 14px;
     background: #2d6a4f;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
 }
@@ -58,27 +59,27 @@ button:hover {
 }
 
 .result-card {
-    margin-top: 30px;
     text-align: center;
+    margin-top: 30px;
     background: #edf7ed;
-    padding: 20px;
-    border-radius: 12px;
+    padding: 25px;
+    border-radius: 15px;
 }
 
 .result-value {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: bold;
     color: #1b4332;
 }
 
 .grade {
-    font-size: 34px;
+    font-size: 36px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .section {
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 .section h2 {
@@ -87,20 +88,15 @@ button:hover {
 
 .chart {
     text-align: center;
-    margin-top: 20px;
 }
 
 .chart img {
-    max-width: 500px;
+    max-width: 550px;
     width: 100%;
-}
-
-ul {
-    line-height: 1.8;
 }
 
 .footer {
     text-align: center;
+    margin-top: 40px;
     color: #777;
-    margin-top: 30px;
 }
