@@ -1,34 +1,57 @@
 # EcoGuide AI
 
-EcoGuide AI is a Carbon Footprint Awareness Platform built using Flask.
+## Overview
+
+EcoGuide AI is a Carbon Footprint Awareness Platform that helps users estimate their annual carbon emissions and receive personalized recommendations for reducing environmental impact.
 
 ## Features
 
 - Carbon Footprint Calculator
-- Carbon Grade (A-F)
+- Carbon Grade (A–F)
 - Emission Breakdown
-- Pie Chart Visualization
-- Personalized Recommendations
+- Emission Visualization
+- Personalized Sustainability Recommendations
+- Responsive User Interface
 
 ## Tech Stack
 
 - Python
 - Flask
-- HTML/CSS
-- Matplotlib
-- Gunicorn
+- HTML
+- CSS
+- Chart Visualization
+- Pytest
 
-## Run Locally
+## How It Works
 
-```bash
-pip install -r requirements.txt
-python app.py
-```
+Users enter:
+
+- Daily commute distance
+- Vehicle type
+- Monthly electricity usage
+- Flights per year
+- Diet type
+
+The application calculates annual emissions and generates:
+
+- Carbon score
+- Carbon grade
+- Emission breakdown
+- Sustainability recommendations
 
 ## Deployment
 
-Hosted on Render.
+Live Application:
 
-## Author
+[Render Deployment URL]
 
-Mikul Manothaar
+## Repository
+
+[GitHub Repository URL]
+
+## Future Improvements
+
+- User accounts
+- Emission history tracking
+- AI-powered sustainability suggestions
+- Community sustainability leaderboard
