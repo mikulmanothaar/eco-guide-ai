@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EcoGuide AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>🌍 EcoGuide AI</h1>
+
+<h2>Carbon Footprint Awareness Platform</h2>
+
+<form method="POST">
+
+<label>Daily Commute Distance (km)</label>
+<input type="number" name="distance" required>
+
+<label>Vehicle Type</label>
+<select name="vehicle">
+    <option value="car">Car</option>
+    <option value="bus">Bus</option>
+    <option value="bike">Bike</option>
+    <option value="walk">Walk</option>
+</select>
+
+<label>Monthly Electricity Usage (kWh)</label>
+<input type="number" name="electricity" required>
+
+<label>Flights Per Year</label>
+<input type="number" name="flights" required>
+
+<label>Diet Type</label>
+<select name="diet">
+    <option value="vegan">Vegan</option>
+    <option value="vegetarian">Vegetarian</option>
+    <option value="nonveg">Non Vegetarian</option>
+</select>
+
+<button type="submit">Calculate Footprint</button>
+
+</form>
+
+{% if result is not none %}
+
+<div class="results">
+
+<h2>Your Estimated Annual Carbon Footprint</h2>
+
+<h1>{{ result }} tCO₂</h1>
+<h2>Carbon Grade: {{ grade }}</h2>
+
+<h3>Recommendations</h3>
+
+<ul>
+{% for item in recommendations %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
