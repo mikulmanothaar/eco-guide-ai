@@ -58,13 +58,17 @@ https://github.com/mikulmanothaar/eco-guide-ai
 ## Application Screenshots
 
 ### Home Page
-![Home](screenshots/home.png)
+
+<img src="screenshots/Home.png" width="800">
 
 ### Input Form
-![Form](screenshots/form.png)
+
+<img src="screenshots/Form.png" width="800">
 
 ### Results Dashboard
-![Results](screenshots/results.png)
 
-### Recommendations
-![Recommendations](screenshots/recommendations.png)
+<img src="screenshots/results.png" width="800">
+
+### Personalized Recommendations
+
+<img src="screenshots/recommendations.png" width="800">
