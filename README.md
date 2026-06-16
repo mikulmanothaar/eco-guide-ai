@@ -43,11 +43,11 @@ The application calculates annual emissions and generates:
 
 Live Application:
 
-[Render Deployment URL]
+https://eco-guide-ai-1.onrender.com/
 
 ## Repository
 
-[GitHub Repository URL]
+https://github.com/mikulmanothaar/eco-guide-ai
 
 ## Future Improvements
 
@@ -55,3 +55,26 @@ Live Application:
 - Emission history tracking
 - AI-powered sustainability suggestions
 - Community sustainability leaderboard
+## Application Screenshots
+
+### Home Page
+
+![Home](screenshots/home.png)
+
+---
+
+### Input Form
+
+![Form](screenshots/form.png)
+
+---
+
+### Results Dashboard
+
+![Results](screenshots/results.png)
+
+---
+
+### Personalized Recommendations
+
+![Recommendations](screenshots/recommendations.png)
